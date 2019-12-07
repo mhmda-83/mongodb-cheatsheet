@@ -42,6 +42,8 @@ OR
 
 # Querying
 
+## find
+
 retrieve all of documents
 
 `db.collection.find()` OR `db.collection.find({})`
@@ -60,11 +62,13 @@ if we want to find above user by job title we could use following command
 
 `db.collection.find({'job.title': 'programmer'})`
 
-limit results
+## limit
 
 `db.collection.find().limit(10)`
 
 NOTE: 10 is count of documents which will be retrieved
+
+## skip
 
 skip result
 
@@ -72,6 +76,28 @@ skip result
 
 NOTE: 2 is count of documents which will be skipped
 
+## sort
+
+show sorted result
+
 `db.collection.find().sort({fieldName: 1})`
 
 NOTE: 1 is ascending and -1 is descending
+
+## count
+
+retrieve count of results
+
+`db.collection.find().count()`
+
+## distinct
+
+retrieve distinct value
+
+`db.collection.distinct('name')`
+
+NOTE: name is a field
+
+for nested field we can use following command
+
+`db.collection.distinct('comments.message')`
