@@ -122,3 +122,33 @@ NOTE: name is a field
 for nested field we can use following command
 
 `db.collection.distinct('comments.message')`
+
+## Operators
+
+### less than
+
+`db.collection.find({field: {$lt: 200}})`
+
+### less than or equal
+
+`db.collection.find({field: {$lte: 200}})`
+
+### greater than
+
+`db.collection.find({field: {$gt: 200}})`
+
+### greater than or equal
+
+`db.collection.find({field: {$gte: 200}})`
+
+### not equal
+
+`db.collection.find({field: {$ne: 'string is also accepted in some operators'}})`
+
+### in
+
+`db.collection.find({field: {$in: [1999,2010,2019,2022]}})`
+
+### all
+
+`db.collection.find({field: {$all: [1999,2010]}})`
