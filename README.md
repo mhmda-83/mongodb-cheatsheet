@@ -62,6 +62,10 @@ if we want to find above user by job title we could use following command
 
 `db.collection.find({'job.title': 'programmer'})`
 
+using regex
+
+`db.collection.find({name: /M.*/})`
+
 ## limit
 
 `db.collection.find().limit(10)`
