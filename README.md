@@ -66,6 +66,12 @@ using regex
 
 `db.collection.find({name: /M.*/})`
 
+## pretty
+
+make results pretty 😁
+
+`db.collection.find().pretty()`
+
 ## limit
 
 `db.collection.find().limit(10)`
