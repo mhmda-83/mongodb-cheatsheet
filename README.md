@@ -12,4 +12,4 @@
 
 # Create collection
 
-`db.createCollection('db_name')`
+`db.createCollection('collection_name')`
