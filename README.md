@@ -9,3 +9,7 @@
 # Create or switch between databases
 
 `use database_name`
+
+# Create collection
+
+`db.createCollection('db_name')`
