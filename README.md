@@ -42,6 +42,10 @@ OR
 
 # Querying
 
+retrieve all of documents
+
+`db.collection.find()` OR `db.collection.find({})`
+
 query by value of specific field value
 
 `db.collection.find({name: 'Mohammad MohammadAlian'})`
@@ -55,3 +59,19 @@ var user = {name: 'John', job: {title: 'programmer', salary: 125000}};
 if we want to find above user by job title we could use following command
 
 `db.collection.find({'job.title': 'programmer'})`
+
+limit results
+
+`db.collection.find().limit(10)`
+
+NOTE: 10 is count of documents which will be retrieved
+
+skip result
+
+`db.collection.find().skip(2)`
+
+NOTE: 2 is count of documents which will be skipped
+
+`db.collection.find().sort({fieldName: 1})`
+
+NOTE: 1 is ascending and -1 is descending
