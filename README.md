@@ -26,7 +26,7 @@ db.insertOne(user)
 
 OR
 
-`db.insertOne({name: 'Mohammad MohammadAlian', ip: '127.0.0.1', lastLoginTime: 1575704736})`;
+`db.collection.insertOne({name: 'Mohammad MohammadAlian', ip: '127.0.0.1', lastLoginTime: 1575704736})`;
 
 to insert many object in one query you can use insertMany function
 
@@ -38,4 +38,20 @@ db.insertMany(users)
 
 OR
 
-`db.insertMany([{name: 'Mohammad MohammadAlian', ip: '127.0.0.1', lastLoginTime: 1575704736}, {name: 'John Doe', ip: '10.10.10.10', lastLoginTime: 1575704965}])`;
+`db.collection.insertMany([{name: 'Mohammad MohammadAlian', ip: '127.0.0.1', lastLoginTime: 1575704736}, {name: 'John Doe', ip: '10.10.10.10', lastLoginTime: 1575704965}])`;
+
+# Querying
+
+query by value of specific field value
+
+`db.collection.find({name: 'Mohammad MohammadAlian'})`
+
+querying throw nested field
+
+```
+var user = {name: 'John', job: {title: 'programmer', salary: 125000}};
+```
+
+if we want to find above user by job title we could use following command
+
+`db.collection.find({'job.title': 'programmer'})`
