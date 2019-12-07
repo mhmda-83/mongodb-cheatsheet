@@ -59,7 +59,7 @@ retrieve all of documents
 
 `db.collection.find()` OR `db.collection.find({})`
 
-query by value of specific field field
+query by value of specific field
 
 `db.collection.find({name: 'Mohammad MohammadAlian'})`
 
