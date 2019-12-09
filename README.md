@@ -210,3 +210,9 @@ push value to array
 `db.collection.updateOne({_id: 1}, {$push: {numbers: 6}})`
 
 push six into numbers where id is 1
+
+### each
+
+`db.collection.updateOne({_id: 1}, {numbersArray: {$each: ['R','T', 'H']}})`
+
+add each value to numbersArray where id is 1
