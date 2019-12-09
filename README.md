@@ -178,3 +178,27 @@ modulo operator
 
 [type numbers](https://docs.mongodb.com/manual/reference/bson-types/)
 `db.collection.find({field: {$type: 2}})`
+
+## Update document
+
+general form
+
+`db.collection.update({query}, {update}, {flags})`
+
+example
+
+`db.collection.update({field: 'value'}, {$set: {otherField: 'new Value'}}, {upsert: true})`
+
+### inc
+
+increment value
+
+`db.collection.updateOne({field: 'value'}, {$inc: {number: 6}})`
+
+Increases six units of number
+
+### unset
+
+`db.collection.updateOne({field: 'value'}, {$unset: {anotherField: 1}})`
+
+this will be remove anotherField where field equal value
