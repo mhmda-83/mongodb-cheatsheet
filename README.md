@@ -216,3 +216,21 @@ push six into numbers where id is 1
 `db.collection.updateOne({_id: 1}, {$push:{numbersArray: {$each: ['R','T', 'H']}}})`
 
 add each value to numbersArray where id is 1
+
+### addToSet
+
+push to array if not exists
+
+`db.collection.updateOne({_id:1}, {$addToSet: {numbers: 565}})`
+
+### pop
+
+`db.collection.updateOne({_id: 1}, {$pop: {numbers: -1}})`
+1: from end
+-1: from beginning
+
+### pull
+
+`db.collection.updateOne({_id: 1}, {$pull: {numbers: 5}})`
+
+remove all 5 in numbers Array where id is 1
