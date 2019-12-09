@@ -242,3 +242,11 @@ remove all 5 in numbers Array where id is 1
 ## rename collection
 
 `db.collection.renameCollection('newCollectionName')`
+
+## delete document
+
+`db.collection.deleteOne({_id: 1})`
+
+## delete collection
+
+`db.collection.drop()`
