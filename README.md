@@ -250,3 +250,7 @@ remove all 5 in numbers Array where id is 1
 ## delete collection
 
 `db.collection.drop()`
+
+## delete database
+
+`db.dropDatabase()`
