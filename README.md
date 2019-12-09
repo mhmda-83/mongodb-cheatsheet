@@ -202,3 +202,11 @@ Increases six units of number
 `db.collection.updateOne({field: 'value'}, {$unset: {anotherField: 1}})`
 
 this will be remove anotherField where field equal value
+
+### push
+
+push value to array
+
+`db.collection.updateOne({_id: 1}, {$push: {numbers: 6}})`
+
+push six into numbers where id is 1
