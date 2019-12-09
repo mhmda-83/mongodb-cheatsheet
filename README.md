@@ -152,3 +152,29 @@ for nested field we can use following command
 ### all
 
 `db.collection.find({field: {$all: [1999,2010]}})`
+
+### slice
+
+`db.collection.find({arrayField: {$slice: 3}})`
+
+### or
+
+`db.collection.find({$or: [{filed: 'value'}, {field: 'value'}]})`
+
+### mod
+
+modulo operator
+`db.collection.find({field: {$mod: [100,0]}})`
+
+### size
+
+`db.collection.find({arrayFiled: {$size: 2}})`
+
+### exists
+
+`db.collection.find({field: {$exists: true}})`
+
+### type
+
+[type numbers](https://docs.mongodb.com/manual/reference/bson-types/)
+`db.collection.find({field: {$type: 2}})`
