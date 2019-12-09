@@ -238,3 +238,7 @@ remove all 5 in numbers Array where id is 1
 ### pullAll
 
 `db.collection.updateOne({_id: 1}, {$pullAll: {numbers: [4,5,6]}})`
+
+## rename collection
+
+`db.collection.renameCollection('newCollectionName')`
