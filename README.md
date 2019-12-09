@@ -234,3 +234,7 @@ push to array if not exists
 `db.collection.updateOne({_id: 1}, {$pull: {numbers: 5}})`
 
 remove all 5 in numbers Array where id is 1
+
+### pullAll
+
+`db.collection.updateOne({_id: 1}, {$pullAll: {numbers: [4,5,6]}})`
