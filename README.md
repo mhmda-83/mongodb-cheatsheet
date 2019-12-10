@@ -254,3 +254,12 @@ remove all 5 in numbers Array where id is 1
 ## delete database
 
 `db.dropDatabase()`
+
+## Create Index
+
+`db.collection.createIndex({field: 1})`
+NOTE: 1 is ascending and -1 is descending
+
+## Drop Index
+
+`db.collection.dropIndex({field: 1})`
