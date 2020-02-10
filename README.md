@@ -273,37 +273,14 @@ create text index
 
 `db.collection.aggregate({ $group: {_id: '$color', count: {$sum: 1}} })`
 
-db.aggregation.aggregate({
-$group: {_id: "$color"}
-});
+`db.aggregation.aggregate({ $group: {_id: "$color"} });`
 
-db.aggregation.aggregate([
-{$match: {num: {$gt: 500}}},
-{$group: {_id: '$color', count: {$sum: 1}}},
-{$limit: 5}
-]);
+`db.aggregation.aggregate([ {$match: {num: {$gt: 500}}}, {$group: {_id: '$color', count: {$sum: 1}}}, {$limit: 5} ]);`
 
-db.aggregation.aggregate([
-{$match: {num: {$gt: 500}}},
-{$sort: {color: 1}}
-]);
+`db.aggregation.aggregate([ {$match: {num: {$gt: 500}}}, {$sort: {color: 1}} ]);`
 
-db.aggregation.aggregate({
-$unwind: "$vegetables"
-});
+`db.aggregation.aggregate({ $unwind: "$vegetables" });`
 
-db.aggregation.aggregate([
-{$match: {num: {$gt: 500}}},
-{$project: {_id:0, fruits: 0}},
-{$skip: 200},
-{$out: "newCollectionGeneratedByAggregationFramework"}
-]);
+`db.aggregation.aggregate([ {$match: {num: {$gt: 500}}}, {$project: {_id:0, fruits: 0}}, {$skip: 200}, {$out: "newCollectionGeneratedByAggregationFramework"} ]);`
 
-db.prima.aggregate({
-\$lookup: {
-from: 'secunda',
-localField: 'number',
-foreignField: 'number',
-as: 'doc'
-}
-});
+`db.prima.aggregate({ \$lookup: { from: 'secunda', localField: 'number', foreignField: 'number', as: 'doc' } });`
